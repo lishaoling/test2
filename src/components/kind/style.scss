@@ -1,0 +1,57 @@
+@import "~@/lib/reset.scss";
+header{
+    width:100%;
+    line-height: 0.88rem;
+    text-align: center;
+    background-color: #FF6666;
+    color: #fff;
+}
+.content{
+    @include flexbox();
+    aside{
+        width:2rem;
+        height:100%;
+        border:1px solid #666;
+        ul{
+            
+            li{
+                width: 100%;
+                height: 0.72rem;
+                border-bottom: 1px solid #666;
+                text-align: center;
+                color: #333;
+                line-height: 0.72rem;
+            }
+            .router-link-active{
+                background-color: #42B983;
+                color: #fff;
+            }
+        }
+    }
+    section{
+        @include flex();
+    }
+}
+/*动画*/
+/* .bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {   //定义动画内容
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  } */
+.bounce-enter-active {
+  animation: slideOutLeft .5s;    //引入框架，不需要再定义动画内容
+}
+.bounce-leave-active {
+  animation: slideOutLeft 0s both;   //引入框架，不需要再定义动画内容
+}
